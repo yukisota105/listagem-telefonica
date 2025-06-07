@@ -1,18 +1,22 @@
 import { View,StyleSheet,Text } from "react-native"
 
-interface propsContato{
+interface propsJogos{
     nome:string,
-    tel:string
+    plataforma:string,
+    preco:string
 }
 
-export default function Contatos({nome, tel}:propsContato){
+export default function Jogos({nome, plataforma,preco}:propsJogos){
     return(
         <View style={styles.cartao}>
             <Text style={styles.nome}>
                 Nome:{nome}
             </Text>
-            <Text style={styles.tel}>
-                Telefone:{tel}
+            <Text style={styles.plataforma}>
+                plataforma:{plataforma}
+            </Text>
+            <Text style={styles.preco}>
+                plataforma:{preco}
             </Text>
         </View>
         
@@ -22,7 +26,7 @@ export default function Contatos({nome, tel}:propsContato){
 
     const styles = StyleSheet.create({
         cartao:{
-            backgroundColor:"#08f",
+            backgroundColor:"#40cd97",
             padding:8,
             marginVertical:10,
             borderRadius:8,
@@ -34,10 +38,16 @@ export default function Contatos({nome, tel}:propsContato){
             fontWeight:'bold'
         },
 
-        tel:{
+        plataforma:{
            fontSize:20,
            color:'#333'
+        },
+
+         preco:{
+            fontSize:26,
+            fontWeight:'bold'
         }
+
 
 
     });
